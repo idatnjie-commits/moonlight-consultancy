@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moonlight Consultancy provides consultation, US school placement guidance and visa application support in The Gambia.">
+  <meta name="theme-color" content="#10243A">
+  <title>Moonlight Consultancy | Guiding Your Journey</title>
+  <style>
+    :root {
+      --navy: #10243A;
+      --navy-light: #1D3B59;
+      --gold: #D8B66F;
+      --gold-dark: #B58D43;
+      --ivory: #F7F5F0;
+      --white: #FFFFFF;
+      --ink: #263649;
+      --muted: #687789;
+      --line: #E7E9EC;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1140px, 90%); margin: 0 auto; }
+    .topbar { background: var(--navy); color: #E7EAF0; font-size: .82rem; padding: 8px 0; }
+    .topbar .container { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--navy); }
+    .brand-mark { width: 43px; height: 43px; border: 1.5px solid var(--gold); border-radius: 50%; display: grid; place-items: center; color: var(--gold-dark); font-size: 1.45rem; }
+    .brand-name { font-family: Georgia, serif; font-size: 1.08rem; letter-spacing: .12em; line-height: 1.2; font-weight: 700; }
+    .brand-name small { display: block; font-family: "Segoe UI", Arial, sans-serif; font-size: .62rem; letter-spacing: .28em; font-weight: 600; margin-top: 4px; }
+    nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    nav a { color: var(--navy); font-size: .9rem; font-weight: 600; }
+    nav a:hover { color: var(--gold-dark); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; background: var(--gold); color: var(--navy); padding: 13px 21px; border-radius: 4px; font-weight: 700; border: 1px solid var(--gold); transition: .2s ease; }
+    .btn:hover { background: #E5C987; border-color: #E5C987; transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,.65); margin-left: 10px; }
+    .btn-outline:hover { background: rgba(255,255,255,.1); color: var(--white); }
+    .hero { color: var(--white); background: radial-gradient(circle at 82% 20%, rgba(216,182,111,.18), transparent 27%), linear-gradient(120deg, #0B1C2D, #173957); padding: 100px 0 108px; overflow: hidden; }
+    .hero-inner { max-width: 780px; }
+    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .19em; font-size: .75rem; font-weight: 800; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.65rem); line-height: 1.08; font-weight: 500; margin: 18px 0; }
+    .hero p { color: #E1E8EF; font-size: 1.12rem; max-width: 650px; margin-bottom: 28px; }
+    .hero-note { margin-top: 30px; color: #C9D3DD; font-size: .88rem; }
+    section { padding: 78px 0; }
+    .section-head { max-width: 720px; margin-bottom: 36px; }
+    .section-head h2 { color: var(--navy); font-size: clamp(2rem, 4vw, 2.85rem); line-height: 1.15; font-weight: 500; margin: 10px 0 14px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .service { border: 1px solid var(--line); border-radius: 8px; padding: 29px; box-shadow: 0 10px 28px rgba(16,36,58,.045); background: white; }
+    .service-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; color: var(--navy); background: var(--ivory); font-size: 1.25rem; }
+    .service h3 { color: var(--navy); font-size: 1.35rem; margin: 18px 0 9px; }
+    .service p { color: var(--muted); font-size: .96rem; margin: 0; }
+    .service .learn { display: inline-block; color: var(--gold-dark); font-weight: 700; margin-top: 18px; font-size: .9rem; }
+    .soft { background: var(--ivory); }
+    .audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .audience { padding: 24px; background: white; border-radius: 7px; border: 1px solid #ECE8DF; }
+    .audience h3 { color: var(--navy); margin: 0 0 8px; font-size: 1.25rem; }
+    .audience p { color: var(--muted); margin: 0; font-size: .94rem; }
+    .process { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+    .step { border-left: 2px solid var(--gold); padding: 3px 0 4px 20px; }
+    .step-no { color: var(--gold-dark); font-weight: 800; letter-spacing: .1em; font-size: .78rem; }
+    .step h3 { color: var(--navy); font-size: 1.3rem; margin: 7px 0; }
+    .step p { color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 55px; }
+    .about-copy h2 { color: var(--navy); font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; font-weight: 500; margin: 10px 0 18px; }
+    .about-copy p { color: var(--muted); }
+    .promise { background: var(--navy); color: white; padding: 36px; border-radius: 8px; }
+    .promise .moon { color: var(--gold); font-size: 2rem; }
+    .promise h3 { color: var(--gold); font-size: 1.55rem; font-weight: 500; }
+    .promise p { color: #DCE4EC; }
+    .contact { background: var(--navy); color: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: start; }
+    .contact h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 500; line-height: 1.15; margin: 10px 0 14px; }
+    .contact-copy p { color: #DCE4EC; }
+    .contact-panel { background: white; color: var(--ink); border-radius: 8px; padding: 30px; }
+    .contact-panel h3 { color: var(--navy); font-size: 1.45rem; margin: 0 0 8px; }
+    .contact-panel p { color: var(--muted); }
+    .contact-details { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .93rem; }
+    .contact-details strong { color: var(--navy); }
+    .disclaimer { color: #DCE4EC; font-size: .82rem; opacity: .88; margin-top: 35px; border-top: 1px solid rgba(255,255,255,.18); padding-top: 20px; }
+    footer { background: #091725; color: #D4DCE5; padding: 25px 0; font-size: .85rem; }
+    footer .container { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 800px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 15px 0; }
+      nav { gap: 13px 18px; }
+      .services, .audience-grid, .process { grid-template-columns: 1fr; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero { padding: 76px 0 82px; }
+      section { padding: 60px 0; }
+      .btn-outline { margin: 10px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Based in The Gambia · Supporting journeys to the United States</span>
+      <span>Education guidance · Consultation · Visa support</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Moonlight Consultancy home">
+        <span class="brand-mark">☾</span>
+        <span class="brand-name">MOONLIGHT<small>CONSULTANCY</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="eyebrow">Your journey. Your next chapter.</div>
+        <h1>Guiding Your Journey. Opening New Horizons.</h1>
+        <p>From exploring study opportunities in the United States to preparing your application with confidence, Moonlight Consultancy offers thoughtful guidance and personalised support for students, families and professionals in The Gambia.</p>
+        <a class="btn" href="#contact">Enquire About a Consultation</a>
+        <a class="btn btn-outline" href="#services">Explore Our Services</a>
+        <div class="hero-note">Clear guidance. Personal attention. Informed decisions.</div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Our services</div>
+          <h2>Practical support for important next steps.</h2>
+          <p>Every journey is different. We help you understand your options, prepare thoughtfully and approach each stage with greater clarity.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-icon">✧</div>
+            <h3>Consultation Services</h3>
+            <p>One-on-one discussions to understand your goals, answer your questions and identify practical next steps for your education or travel plans.</p>
+            <a class="learn" href="#contact">Discuss your plans →</a>
+          </article>
+          <article class="service">
+            <div class="service-icon">⌂</div>
+            <h3>US School Placement</h3>
+            <p>Guidance on researching schools and institutions, exploring suitable programmes, understanding entry requirements and preparing admission applications.</p>
+            <a class="learn" href="#contact">Explore study options →</a>
+          </article>
+          <article class="service">
+            <div class="service-icon">✈</div>
+            <h3>US Visa Application Guidance</h3>
+            <p>Support in understanding relevant visa application steps, organising supporting documents and reviewing application materials for completeness.</p>
+            <a class="learn" href="#contact">Ask about visa support →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Who we support</div>
+          <h2>Support for every stage of your journey.</h2>
+          <p>Whether you are planning for yourself or supporting a loved one, we aim to make the process easier to understand.</p>
+        </div>
+        <div class="audience-grid">
+          <article class="audience">
+            <h3>Students</h3>
+            <p>Explore education pathways, identify potential institutions and prepare for the school application process.</p>
+          </article>
+          <article class="audience">
+            <h3>Families</h3>
+            <p>Get guidance as you consider education and travel options for your children or family members.</p>
+          </article>
+          <article class="audience">
+            <h3>Professionals</h3>
+            <p>Understand application requirements and organise your next steps when considering travel or other opportunities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">How it works</div>
+          <h2>A straightforward way to get started.</h2>
+          <p>We take time to understand what you need before discussing the support that may be appropriate.</p>
+        </div>
+        <div class="process">
+          <article class="step">
+            <div class="step-no">STEP 01</div>
+            <h3>Make an enquiry</h3>
+            <p>Tell us whether you are interested in a consultation, school placement guidance or visa application support.</p>
+          </article>
+          <article class="step">
+            <div class="step-no">STEP 02</div>
+            <h3>Discuss your goals</h3>
+            <p>Arrange a consultation to talk through your circumstances, questions and intended plans.</p>
+          </article>
+          <article class="step">
+            <div class="step-no">STEP 03</div>
+            <h3>Understand your next steps</h3>
+            <p>Receive clear information about relevant requirements, preparation and possible next steps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <div class="eyebrow">About Moonlight</div>
+          <h2>A clearer path begins with the right guidance.</h2>
+          <p>Moonlight Consultancy is a Gambia-based consultancy focused on consultation, school placement guidance and visa application support for individuals, families and professionals exploring opportunities in the United States.</p>
+          <p>Our approach is centred on listening, clear communication and helping clients make informed decisions. We recognise that every application and every personal journey is unique.</p>
+        </div>
+        <aside class="promise">
+          <div class="moon">☾</div>
+          <h3>Guidance with care and clarity.</h3>
+          <p>We are here to help you understand the process, prepare with care and move forward with confidence.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <div class="eyebrow">Start a conversation</div>
+            <h2>Your next chapter could start with one conversation.</h2>
+            <p>Contact Moonlight Consultancy to enquire about our services or to arrange an initial discussion.</p>
+            <p><strong>Location:</strong> The Gambia<br><strong>Service focus:</strong> United States of America</p>
+          </div>
+          <div class="contact-panel">
+            <h3>Make an enquiry</h3>
+            <p>Our contact details will be added here. In the meantime, this section is ready for your business email address and WhatsApp number.</p>
+            <div class="contact-details">
+              <p><strong>Email:</strong> [Add business email]</p>
+              <p><strong>WhatsApp:</strong> [To be added]</p>
+              <p><strong>Office address:</strong> [Add if applicable]</p>
+            </div>
+          </div>
+        </div>
+        <div class="disclaimer">
+          Moonlight Consultancy provides guidance and application support. Admission decisions are made by educational institutions, and visa decisions are made solely by the relevant United States authorities. We do not guarantee admission, visa approval or processing times. Clients should always consult official institution and government sources for current requirements.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© 2026 Moonlight Consultancy. All rights reserved.</span>
+      <span>Guiding Your Journey. Opening New Horizons.</span>
+    </div>
+  </footer>
+</body>
+</html>
